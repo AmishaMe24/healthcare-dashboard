@@ -3,6 +3,8 @@
 
 A modern, responsive dashboard for healthcare professionals to monitor patient vital signs and medical history.
 
+![image](https://github.com/user-attachments/assets/5759b74f-4a2b-4f85-9d0a-2b2d75e7ab3f)
+
 ## Features
 
 - **Patient Management**: View and select from a list of patients
