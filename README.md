@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+```markdown
+# Healthcare Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive dashboard for healthcare professionals to monitor patient vital signs and medical history.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Patient Management**: View and select from a list of patients
+- **Vital Signs Monitoring**: Track blood pressure, heart rate, respiratory rate, and temperature
+- **Blood Pressure Visualization**: Interactive chart showing blood pressure trends over time
+- **Diagnostic History**: View patient diagnosis history and status
+- **Responsive Design**: Works on desktop and mobile devices
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React.js
+- Chart.js for data visualization
+- Tailwind CSS for styling
+- Lucide React for icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd healthcare-dashboard
+ ```
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies
+```bash
+npm install
+ ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server
+```bash
+npm start
+ ```
 
-### `npm run eject`
+4. Open your browser and navigate to http://localhost:3000
+## Project Structure
+- /src : Source code
+  - /components : React components
+    - BloodPressureChart.js : Chart for visualizing blood pressure data
+    - Navigation.js : Navigation component
+    - PatientList.js : Component for displaying and selecting patients
+  - /assets : Static assets like images
+  - App.js : Main application component
+## Usage
+The dashboard displays patient information including:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Blood pressure history with interactive time range selection
+- Current vital signs (respiratory rate, temperature, heart rate)
+- Diagnostic list with problem descriptions and status
+- Patient personal information
+## Data Structure
+The application expects patient data in the following format:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+{
+  name: "Patient Name",
+  gender: "Gender",
+  age: 28,
+  profile_picture: "URL to profile picture",
+  date_of_birth: "YYYY-MM-DD",
+  phone_number: "Phone number",
+  emergency_contact: "Emergency contact",
+  insurance_type: "Insurance provider",
+  diagnosis_history: [
+    {
+      month: "Month",
+      year: YYYY,
+      blood_pressure: {
+        systolic: { value: 120, levels: "Normal" },
+        diastolic: { value: 80, levels: "Normal" }
+      },
+      heart_rate: { value: 72, levels: "Normal" },
+      respiratory_rate: { value: 16, levels: "Normal" },
+      temperature: { value: 98.6, levels: "Normal" }
+    }
+  ],
+  diagnostic_list: [
+    {
+      name: "Diagnosis name",
+      description: "Description",
+      status: "Status"
+    }
+  ]
+}
+ ```
+```
